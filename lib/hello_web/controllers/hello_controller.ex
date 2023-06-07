@@ -3,7 +3,7 @@ defmodule HelloWeb.HelloController do
   # available that we’ll want to use later.
   use HelloWeb, :controller
 
-  def world(conn, _params) do
-    render(conn, :world, layout: false)
+  def world(conn, %{"name" => name}) do
+    render(conn, :world, name: name)
   end
 end
